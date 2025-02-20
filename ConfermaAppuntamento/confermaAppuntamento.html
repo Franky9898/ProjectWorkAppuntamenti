@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Appuntamenti</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+
+
+    <body>
+        <div class="appuntmenti">
+            <!-- Navbar, per ora placeholder -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Gym Appointments</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Main Container -->
+            <div class="container my-4">
+                <h1 class="mb-4">Choose a Class</h1>
+
+                <!-- Form filtri -->
+                <form class="row g-3 mb-4">
+                    <div class="col-sm-4">
+                        <label for="classDate" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="classDate" required>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="timeSlot" class="form-label">Time Slot</label>
+                        <select class="form-select" id="timeSlot" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="hour1">08:00 AM - 09:00 AM</option>
+                            <option value="hour2">09:00 AM - 10:00 AM</option>
+                            <option value="hour3">10:00 AM - 11:00 AM</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="coachSelect" class="form-label">Coach</label>
+                        <select class="form-select" id="coachSelect" required>
+                            <option selected disabled>Choose...</option>
+                            <option value="coach1">Coach 1</option>
+                            <option value="coach2">Coach 2</option>
+                            <option value="coach3">Coach 3</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Search Classes</button>
+                    </div>
+                </form>
+
+                <!-- Classi disponibili -->
+                <div class="row row-cols-1 row-cols-sm-3 g-4">
+                    <!-- Card della classe -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Yoga Class</h5>
+                                <p class="card-text">I don't know what you do in a yoga class, but it's definitely relaxing.</p>
+                                <p class="card-text"><small class="text-muted">09:30 - 11:00 | Coach: Francesco</small>
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Pilates Class</h5>
+                                <p class="card-text">I think that those who do Pilates don't know what it means to train.</p>
+                                <p class="card-text"><small class="text-muted">16:00 - 17:00 | Coach: William</small>
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">HIIT Session</h5>
+                                <p class="card-text">High intensity interval training... I certainly didn't find it on the internet</p>
+                                <p class="card-text"><small class="text-muted">17:00 - 18:00 | Coach: Lorenzo</small></p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Brake dance</h5>
+                                <p class="card-text">You will not learn how to dodge a fist, that's another class</p>
+                                <p class="card-text"><small class="text-muted">16:00 - 17:00 | Coach: Giordano</small></p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
