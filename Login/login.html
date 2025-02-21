@@ -32,27 +32,37 @@
 
 <body>
     
-
     <div class="form-container">
-    <div class="glass-container">
-        <div class="login-box">
-            <h2>Login</h2>
-            <form action="#" method="POST">
-                <input type="text" id="username" name="username" required placeholder="Username">
-                <input type="password" id="password" name="password" required placeholder="Password">
-                
-                <div class="options">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Ricordami</label>
-                    <a href="#">Password Dimenticata?</a>
-                </div>
-
-                <button type="submit">Login</button>
-                <p>Non hai un account? <a href="../Register/register.html" id="register">Registrati</a></p>
-            </form>
+        <div class="glass-container">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form id="loginForm" action="#" method="POST">
+                    <label for="userType" class="user-type-label">Tipo di Account</label>
+                    <div class="user-type-selector">
+                        <select id="userType" name="userType" required>
+                            <option value="base">👤 Utente Base</option>
+                            <option value="instructor">🏅 Istruttore</option>
+                        </select>
+                    </div>
+                    <input type="text" id="username" name="username" required placeholder="Username">
+                    <input type="password" id="password" name="password" required placeholder="Password">
+                    
+                    <div class="options">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Ricordami</label>
+                        <a href="#">Password Dimenticata?</a>
+                    </div>
+    
+                    <button type="submit">Login</button>
+                    <p>Non hai un account? <a href="../Register/register.html" id="register">Registrati</a></p>
+    
+                    <div id="error-message" style="color: red; display: none; font-size: 14px; margin-top: 10px;">
+                        Credenziali non valide. Riprova.
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
     
 
     <div>
@@ -75,6 +85,7 @@
             </p>
         </div>
     </footer>
+    <script src="login.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     

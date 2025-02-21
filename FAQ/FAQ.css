@@ -50,57 +50,6 @@
 .btn-login:hover {
     background-color: #c0392b;
 }
-.container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 50px;
-}
-
-
-.image-right {
-    width: 300px;
-    height: auto;
-    cursor: pointer;
-}
-
-.accordion-button {
-    background-color: #36495c;
-    color: #fff;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-}
-
-.accordion-button:hover {
-    background-color: #f1c40f;
-    color: #2c3e50;
-}
-
-.accordion-button:focus {
-    box-shadow: none;
-    border-color: #f1c40f;
-}
-
-.accordion-body {
-    background-color: #f4f4f4;
-    color: #2c3e50;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.accordion-item {
-    margin-bottom: 10px;
-}
-
-
-.accordion-item .accordion-button:not(.collapsed) {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.accordion-body strong {
-    color: #2c3e50;
-    font-size: 1.1rem;
-}
 .footer {
     background-color: #2c3e50;
     color: white;
