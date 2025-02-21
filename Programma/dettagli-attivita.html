@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettagli Attività</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personalizzato -->
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 id="nomeAttivita" class="text-center mb-4">Dettagli Attività</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Orario</h5>
+                <p id="orarioAttivita" class="card-text">10:00 - 11:00</p>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Lista Partecipanti</h5>
+                <ul id="listaPartecipanti" class="list-group">
+                    <!-- Lista dei clienti verrà popolata qui -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS e dipendenze -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript per popolare i dati fittizi -->
+    <script src="dettagli-attivita.js"></script>
+</body>
+</html>
