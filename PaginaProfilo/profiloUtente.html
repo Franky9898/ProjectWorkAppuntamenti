@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Profilo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="profiloUtente container-fluid">
+            <div class="container my-5" style="width: 40%;">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h3>Profilo Utente</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <img src="https://placehold.co/150x150" alt="profilo" class="rounded-circle img-thumbnail"
+                                width="150" height="150">
+                            <div class="mt-2">
+                                <button class="btn btn-outline-secondary btn-sm" type="button" id="editPhoto" onclick="">Modifica foto</button>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="firstName" value="Keanu" readonly>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Cognome</label>
+                            <input type="text" class="form-control" id="lastName" value="Reeves" readonly>
+                        </div>
+                        <div class="mb-3 ">
+                            <label for="userClass" class="form-label">Registrazioni corsi</label>
+                            <div class="input-group justify-content-around">
+                                <div>
+                                    <button class="btn btn-outline-secondary my-2" type="button" id="historyButton"
+                                        onclick="location.href='storico.html'">
+                                        Storico registrazioni
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary my-2" type="button" id="newClass"
+                                        onclick="location.href='appuntamento.html'">
+                                        Nuova Registrazione
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="email" value="john.wick@mail.com" readonly>
+                                <button class="btn btn-outline-secondary" type="button" id="editEmail" onclick="">
+                                    Modifica
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" value="cagnolino" readonly>
+                                <button class="btn btn-outline-secondary" type="button" id="editPassword" onclick="">
+                                    Modifica
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-center">
+                        <button class="btn btn-danger" type="button" id="eliminaAccount" onclick="">
+                            Elimina Account
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
