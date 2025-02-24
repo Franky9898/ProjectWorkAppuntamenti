@@ -13,7 +13,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     if (userType === "base" && username === users.base.username && password === users.base.password) {
         alert("Login effettuato come Utente Base!");
-        window.location.href = "../Home/user_home.html"; 
+        window.location.href = "../Homepage/index.html"; 
     } else if (userType === "instructor" && username === users.instructor.username && password === users.instructor.password) {
         alert("Login effettuato come Istruttore!");
         window.location.href = "../Home/instructor_home.html";
@@ -26,3 +26,23 @@ function toggleMenu() {
     const menu = document.getElementById('navbarMenu');
     menu.classList.toggle('show');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loginButton = document.getElementById('loginButton');
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if(loginButton && isLoggedIn === 'true') {
+        loginButton.textContent = 'Profilo';
+        loginButton.href = '/profile.html';
+    }
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impedisce l'invio del form per ora
+
+        // ... Logica di login ...
+
+        // Se il login ha successo:
+        localStorage.setItem('isLoggedIn', 'true');
+        window.location.reload(); // Ricarica la pagina per aggiornare il pulsante
+    });
+    
+});
