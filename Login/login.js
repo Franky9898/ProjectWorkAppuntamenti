@@ -23,7 +23,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 });*/
 
 // Funzione per effettuare il login
-function login(username, password) {
+function login(email, password) {
     fetch('http://localhost:8080/api/login', {
         method: 'POST',
         headers: {
@@ -39,27 +39,24 @@ function login(username, password) {
     })
     .then(data => {
         console.log('Login effettuato:', data);
-        printOutput(data);
+        //printOutput(data);
         // Salva il token nel localStorage
-        if(data.token) {
-          localStorage.setItem("authToken", data.token);
-          // Mostra il pulsante Logout e nasconde il form di login
-          document.getElementById("logoutButton").style.display = "block";
-          document.getElementById("loginForm").style.display = "none";
-        }
+        localStorage.setItem("authToken", data.token);
+        window.location.href = "../Homepage/index.html";
     })
     .catch(error => {
         console.error('Errore nel login:', error);
-        printOutput({ error: error.message });
+        //printOutput({ error: error.message });
     });
+    return false;
   }
 
   // Gestione del form di login
   document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    login(username, password);
+    login(email, password);
   });
 
   // Funzione per effettuare il logout
@@ -103,20 +100,3 @@ function toggleMenu() {
     const menu = document.getElementById('navbarMenu');
     menu.classList.toggle('show');
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const loginButton = document.getElementById('loginButton');
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
-
-    if(loginButton && isLoggedIn === 'true') {
-        loginButton.textContent = 'Profilo';
-        loginButton.href = '/profile.html';
-    }
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        localStorage.setItem('isLoggedIn', 'true');
-        window.location.reload();
-    });
-    
-});
