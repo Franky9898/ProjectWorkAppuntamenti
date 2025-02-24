@@ -57,3 +57,8 @@ function eliminaPrenotazione(id) {
         // Qui puoi fare una chiamata API per eliminare la prenotazione
     }
 }
+
+function toggleMenu() {
+    const menu = document.getElementById('navbarMenu');
+    menu.classList.toggle('show');
+}
