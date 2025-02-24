@@ -21,3 +21,8 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         document.getElementById("error-message").style.display = "block";
     }
 });
+
+function toggleMenu() {
+    const menu = document.getElementById('navbarMenu');
+    menu.classList.toggle('show');
+}
