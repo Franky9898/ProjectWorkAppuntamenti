@@ -47,12 +47,12 @@ document.getElementById('registration-form').addEventListener('submit', function
 {
     event.preventDefault();
     let roleNumber;
-
+    const gymId = document.getElementById('gym-selector').value;
     if (document.getElementById("user-type").value == "User")
     {
         roleNumber = 0;
         const newUser = {
-            gym: document.getElementById('gym-selector').value,
+            gym: { id: gymId },
             firstName: document.getElementById('name').value,
             lastName: document.getElementById('surname').value,
             email: document.getElementById('email').value,
@@ -66,7 +66,7 @@ document.getElementById('registration-form').addEventListener('submit', function
     {
         roleNumber = 1;
         const newUser = {
-            gym: document.getElementById('gym-selector').value,
+            gym: { id: gymId },
             firstName: document.getElementById('name').value,
             lastName: document.getElementById('surname').value,
             email: document.getElementById('email').value,
@@ -77,6 +77,7 @@ document.getElementById('registration-form').addEventListener('submit', function
         console.log(newUser.gym, newUser.role, newUser.name, newUser.surname, newUser.email, newUser.password);
         addUser(newUser);
     }
+    window.location.href = '../Login/login.html';
 });
 
 function fetchGyms()
