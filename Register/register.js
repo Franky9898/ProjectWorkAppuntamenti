@@ -46,6 +46,21 @@ function addUser(newUser)
 document.getElementById('registration-form').addEventListener('submit', function (event)
 {
     event.preventDefault();
+
+    let password = document.getElementById('password').value;
+    let passwordRepeat = document.getElementById('psw-repeat').value;
+    if (password !== passwordRepeat) {
+        alert('Le password inserite non coincidono.');
+        return;
+    }
+    
+    // Validate that the checkbox is checked
+    let termsCheckbox = document.getElementById('terms');
+    if (termsCheckbox && !termsCheckbox.checked) {
+        alert('Devi accettare i termini e condizioni.');
+        return;
+    }
+
     let roleNumber;
     const gymId = document.getElementById('gym-selector').value;
     if (document.getElementById("user-type").value == "User")
