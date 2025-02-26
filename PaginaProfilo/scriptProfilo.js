@@ -1,8 +1,3 @@
-function toggleMenu() {
-    const menu = document.getElementById('navbarMenu');
-    menu.classList.toggle('show');
-}
-
 //Funzione di switch del  bottone login/register al bottone Profilo
 document.addEventListener('DOMContentLoaded', function() {
     const loginButton = document.getElementById('loginButton');
@@ -13,3 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
         loginButton.href = '/profile.html';
     }    
 });
+
+//funzione per far si che durante il rimpicciolimento dello schermo spunti un toggle per il menu header
+function toggleMenu() {
+    const menu = document.getElementById('navbarMenu');
+    menu.classList.toggle('show');
+}
