@@ -12,6 +12,8 @@ function fetchCourses(token)
         })
         .then(function (courses)
         {
+            console.log("Courses Response:", courses);
+            
             const courseSelect = document.getElementById("courseList");
             courseSelect.innerHTML = '<option selected disabled>Scegli un corso...</option>';
             courses.forEach(function (course)
@@ -42,6 +44,8 @@ function fetchCoachesEmail(token)
         })
         .then(function (coaches)
         {
+            console.log("Coaches Response:", coaches); 
+
             const coachSelect = document.getElementById("coachEmail");
             coachSelect.innerHTML = '<option selected disabled>Scegli un coach...</option>';
             coaches.forEach(function (coach)
@@ -49,7 +53,7 @@ function fetchCoachesEmail(token)
                 const option = document.createElement("option");
                 option.value = coach.email;
                 option.text = coach.email;
-                courseSelect.appendChild(option);
+                coachSelect.appendChild(option);
             });
         })
         .catch(function (error)

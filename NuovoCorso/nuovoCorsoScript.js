@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function ()
     let form = document.querySelector('.nuovoCorso form');
     form.addEventListener('submit', function (event)
     {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault();
         let title = document.getElementById('title').value.trim();
         let description = document.getElementById('description').value.trim();
         let courseData = {
             title: title,
             description: description
         };
-        let token = localStorage.getItem('token');
+        const token = localStorage.getItem('authToken');
         if (!token)
         {
             alert("Token non trovato. Effettua il login.");
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function ()
                     if (response.ok)
                     {
                         alert("Corso creato con successo: " + text);
+                        window.location.href='../PaginaProfilo/profiloIstruttore.html'
                     } else
                     {
                         alert("Errore: " + text);
