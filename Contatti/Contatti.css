@@ -179,3 +179,10 @@ form button {
         display: block;
     }
 }
+
+#map {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
