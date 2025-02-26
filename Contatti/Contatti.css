@@ -111,6 +111,9 @@ form button {
     border-radius: 5px;
     cursor: pointer;
 }
+.footer-spacer{
+    height: 200px;
+}
 
 .social-icons {
     text-align: center;
