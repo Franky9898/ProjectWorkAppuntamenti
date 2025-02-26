@@ -5,23 +5,34 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Appuntamenti</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/43e0cc1471.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="confermaAppuntamento.css">
     </head>
 
 
     <body>
-        <div class="appuntmenti">
-            <!-- Navbar, per ora placeholder -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-                    <a class="navbar-brand" href="#">Gym Appointments</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+
+        <header>
+            <nav class="navbar">
+                <a href="../Homepage/index.html" class="navbar-brand">
+                    <img src="../Homepage/Logo_provvisorio.png" alt="Gym Logo">
+                </a>
+                <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+                <div class="navbar-menu" id="navbarMenu">
+                    <ul>
+                        <li><a href="../Homepage/index.html">Home</a></li>
+                        <li><a href="../Courses/Courses.html">Corsi</a></li>
+                        <li><a href="#">Abbonamenti</a></li>
+                        <li><a href="../FAQ/FAQ.html">FAQ</a></li>
+                        <li><a href=".//About.html">Chi Siamo</a></li>
+                    </ul>
+                    <a href="../Login/login.html" class="btn-login">Accedi / Registrati</a>
                 </div>
             </nav>
+        </header>
+
+        <div class="appuntamenti">
 
             <!-- Main Container -->
             <div class="container my-4">
@@ -62,7 +73,7 @@
                 <div class="row row-cols-1 row-cols-sm-3 g-4">
                     <!-- Card della classe -->
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card yoga">
                             <div class="card-body">
                                 <h5 class="card-title">Yoga Class</h5>
                                 <p class="card-text">I don't know what you do in a yoga class, but it's definitely relaxing.</p>
@@ -76,7 +87,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card pilates">
                             <div class="card-body">
                                 <h5 class="card-title">Pilates Class</h5>
                                 <p class="card-text">I think that those who do Pilates don't know what it means to train.</p>
@@ -90,7 +101,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card HIIT">
                             <div class="card-body">
                                 <h5 class="card-title">HIIT Session</h5>
                                 <p class="card-text">High intensity interval training... I certainly didn't find it on the internet</p>
@@ -103,7 +114,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card brakedance">
                             <div class="card-body">
                                 <h5 class="card-title">Brake dance</h5>
                                 <p class="card-text">You will not learn how to dodge a fist, that's another class</p>
@@ -118,7 +129,33 @@
                 </div>
 
             </div>
+            <footer class="footer">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.x.com" target="_blank" class="social-icon">
+                        <i class="fab fa-x"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="container">
+                    <p>&copy; 2025 Fitness Booking. Tutti i diritti riservati.</p>
+                    <p>
+                        <a href="../Privacy-policy/Privacy-policy.html">Privacy Policy</a> | 
+                        <a href="../Termini e condizioni/Termini e condizioni.html">Termini e Condizioni</a> | 
+                        <a href="../Contatti/Contatti.html">Contattaci</a>
+                    </p>
+                </div>
+            </footer>
         </div>
+
+        <script src="confermaAppuntamento.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
