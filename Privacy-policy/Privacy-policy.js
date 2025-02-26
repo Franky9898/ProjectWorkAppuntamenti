@@ -8,8 +8,3 @@ document.addEventListener('DOMContentLoaded', function() {
         loginButton.href = '/profile.html';
     }    
 });
-//funzione per far si che durante il rimpicciolimento dello schermo spunti un toggle per il menu header
-function toggleMenu() {
-    const menu = document.getElementById('navbarMenu');
-    menu.classList.toggle('show');
-}

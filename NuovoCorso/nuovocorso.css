@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #36495c;
-    padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #4a6572;
+    padding: 10px 20px;
+    z-index: 2;
 }
 
 .navbar-brand img {
-    height: 75px;
+    height: 60px;
 }
 
 .navbar-menu {
@@ -28,14 +25,13 @@
 }
 
 .navbar-menu li {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .navbar-menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 12px;
 }
 
 .navbar-toggler {
@@ -52,69 +48,11 @@
     border-radius: 20px;
     padding: 8px 15px;
     transition: background 0.3s ease;
-    margin-left: 30px;
 }
 
 .btn-login:hover {
     background-color: #c0392b;
 }
-
-body{
-    font-family: Poppins, serif;
-}
-
-.container-fluid-style{
-    background-color: #E5E1DA;
-}
-
-.row-style{
-    row-gap: 75px;
-}
-
-.row-card-style{
-    display: flex;
-    justify-content: center;
-    row-gap: 75px;
-}
-
-.col-style{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.large-text{
-    user-select: none;
-    font-size: 52px;
-    font-weight: bold; /* color: #212529; */
-}
-
-.text{
-    user-select: none;
-    font-size: 20px;
-}
-
-.about-img{
-    width: 100%;
-    border-radius: 10px;
-}
-
-.card-style{
-    user-select: none;
-    transition: transform 0.3s;
-}
-
-.card-style:hover{
-    transform: scale(1.05);
-}
-
-
-.card-img-style{
-    height: 25vh;
-    border-bottom: 1px solid #dee2e6;;
-}
-
 .social-icons {
     text-align: center;
     margin-bottom: 5px;
@@ -136,7 +74,7 @@ body{
     color: white;
     text-align: center;
     padding: 5px 0 !important;
-    position:relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 100;
@@ -154,6 +92,7 @@ body{
 .footer a:hover {
     text-decoration: underline;
 }
+
 @media (max-width: 992px) {
     .navbar-collapse {
         display: none;
