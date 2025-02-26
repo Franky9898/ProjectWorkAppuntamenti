@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storico Prenotazioni</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="Storico.css" rel="stylesheet">
 </head>
@@ -31,15 +32,14 @@
     <main class="container">
         <h2 class="text-center mb-4">Storico Prenotazioni</h2>
         <table class="table">
-            <thead>
+            <tbody>
                 <tr>
-                    <th>ID Prenotazione</th>
-                    <th>Nome Corso</th>
-                    <th>Data Prenotazione</th>
-                    <th>Stato</th>
-                    <th>Azioni</th>
+                    <td data-label="ID Prenotazione"></td>
+                    <td data-label="Nome Corso"></td>
+                    <td data-label="Data Prenotazione"></td>
+                    <td data-label="Stato" class="stato-confermato">Confermato</td>
+                    <td data-label="Azioni"> <i class="fas fa-trash-alt"></i></td>
                 </tr>
-            </thead>
             <tbody id="storicoPrenotazioni">
             </tbody>
         </table>
