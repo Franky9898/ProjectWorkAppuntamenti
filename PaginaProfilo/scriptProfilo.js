@@ -1,0 +1,33 @@
+document.addEventListener("DOMContentLoaded", function () 
+{
+    const token = localStorage.getItem("authToken");
+    if (!token)
+    {
+        console.error("Nessun token trovato. L'utente potrebbe dover accedere.");
+        return;
+    }
+
+    fetchUserDetails(token);
+});
+
+function fetchUserDetails(token) 
+{
+    fetch('http://localhost:8080/users/userDetails', {
+        method: "GET",
+        headers: {
+            "Authorization": "Bearer " + token 
+        }
+    })
+        .then(response => response.json())
+        .then(user =>
+        {
+            document.getElementById("firstName").value = user.firstName;
+            document.getElementById("lastName").value = user.lastName;
+            document.getElementById("email").value = user.email;
+            document.getElementById("password").value = user.password;
+        })
+        .catch(error =>
+        {
+            console.error("Errore nel recupero dettagli utente:", error);
+        });
+}

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function ()
             alert("Token non trovato. Effettua il login.");
             return;
         }
-        fetch('/addCourse', {
+        fetch('http://localhost:8080/courses/addCourse', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
