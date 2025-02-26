@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti - Fitness Booking</title>
     <link rel="stylesheet" href="Contatti.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
     <header>
@@ -49,8 +50,12 @@
                 <textarea id="message" name="message" rows="5" required></textarea>
 
                 <button type="submit">Invia Messaggio</button>
+                <h2>Dove Trovarci</h2>
+                <p>Visita la nostra palestra in Via Esempio 123, 00100 Roma, Italia.</p>
+                <div id="map" style="height: 320px; width: 100%;"></div>
             </form>
         </section>
+        
     </main>
     <footer class="footer">
         <div class="social-icons">
@@ -66,6 +71,7 @@
             <a href="https://www.linkedin.com" target="_blank" class="social-icon">
                 <i class="fab fa-linkedin"></i>
             </a>
+
         </div>
         <div class="container">
             <p>&copy; 2025 Fitness Booking. Tutti i diritti riservati.</p>
@@ -75,7 +81,9 @@
                 <a href="../Contatti/Contatti.html">Contattaci</a>
             </p>
         </div>
+        
     </footer>
     <script src="Contatti.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>
