@@ -9,10 +9,12 @@ function toggleMenu()
 document.addEventListener('DOMContentLoaded', function ()
 {
     const loginButton = document.getElementById('loginButton');
+    const logoutIcon = document.getElementById('logoutIcon');
     const token = localStorage.getItem('authToken');
 
     if (token != null)
     {
         loginButton.textContent = 'Profilo';
+        logoutIcon.style.display = 'block';
     }
 });
