@@ -70,7 +70,7 @@ function displaySessions(session){
                     <h5 class="card-title">Course: ${session.course.title}</h5>
                     <p class="card-text">${session.course.description}</p>
                     <div class="card-footer-style">
-                        <a href="#" class="btn btn-primary card-btn-style">Prenota</a>
+                        <a onclick="addSessionToUser(${session.id})" id="prenota-btn" class="btn btn-primary card-btn-style">Prenota</a>
                         
                     </div>
                 </div>
@@ -102,8 +102,36 @@ function getFilters() {
 document.getElementById("timeSlot").addEventListener("change", loadSessions);
 document.getElementById("coachSelect").addEventListener("change", loadSessions);
 
+let prenotaButton = document.getElementById("prenota-btn");
+
+function addSessionToUser(sessionId){
+    let token = localStorage.getItem("authToken");
+    fetch('http://localhost:8080/users/addUserSession/' + sessionId, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        },
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+    .catch(error => console.error("Errore nel recupero dati:", error));
+}
+
 
 function toggleMenu() {
     const menu = document.getElementById('navbarMenu');
     menu.classList.toggle('show');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loginButton = document.getElementById('loginButton');
+    const token = localStorage.getItem('authToken');
+
+    if(token != null) {
+        loginButton.textContent = 'Profilo';
+        loginButton.href = '/profile.html';
+    }    
+});

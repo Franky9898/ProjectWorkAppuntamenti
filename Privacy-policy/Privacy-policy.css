@@ -107,6 +107,7 @@ ul {
     color: #312a0b;
 }
 
+
 .social-icons {
     text-align: center;
     margin-bottom: 5px;
@@ -125,7 +126,7 @@ ul {
 }
 
 .footer-spacer{
-    height: 250px;
+    height: 500px;
 }
 .footer {
     background-color: #2c3e50;
