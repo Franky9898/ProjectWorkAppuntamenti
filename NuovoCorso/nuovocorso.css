@@ -53,6 +53,101 @@
 .btn-login:hover {
     background-color: #c0392b;
 }
+body {
+    background-image: url('immaginepernuovicrosi.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+.form-container-nuovoCorso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 150px;
+}
+.glass-container-nuovoCorso {
+    
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    padding: 20px;
+    -webkit-backdrop-filter: blur(10px);
+}
+.nuovoCorso .card-header {
+    background: linear-gradient(135deg, #9aa1a7, #2933b9) !important;
+    border-bottom: none;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+.card-header{
+    background-color: transparent !important;
+}
+.nuovoCorso .form-control,
+.nuovoCorso .form-select {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 14px 20px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+.nuovoCorso .form-control:focus,
+.nuovoCorso .form-select:focus {
+    border-color: #000a11;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+.form-label{
+    color: #ffedeb;
+}
+
+.nuovoCorso .btn-primary {
+    background: linear-gradient(135deg, #35b846, #1a8623);
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nuovoCorso .btn-primary:hover {
+    background: linear-gradient(135deg, #124e75, #1a598d);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-header h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nuovoCorso .form-group {
+    margin-bottom: 25px;
+}
+.btn-primary{
+    background-color: #618561 !important;
+    border-color: #607460 !important;
+}
 .social-icons {
     text-align: center;
     margin-bottom: 5px;
@@ -166,5 +261,64 @@
     }
     .footer{
         padding: 15px 0;
+    }
+}
+@media (min-width: 1200px) {
+    .form-container-nuovoCorso {
+        height: calc(100vh - 50px);
+    }
+
+    .glass-container-nuovoCorso {
+        width: 50%; 
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .form-container-nuovoCorso {
+        height: auto; 
+    }
+
+    .glass-container-nuovoCorso {
+        width: 60%; 
+    }
+}
+
+/* Schermi da 768px a 991px (tablet) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .form-container-nuovoCorso {
+        padding: 40px 20px;
+    }
+
+    .glass-container-nuovoCorso {
+        width: 70%; 
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .form-container-nuovoCorso {
+        padding: 20px;
+    }
+
+    .glass-container-nuovoCorso {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .form-container-nuovoCorso {
+        padding: 10px;
+    }
+
+    .glass-container-nuovoCorso {
+        width: 95%;
+    }
+
+    .card-header {
+        font-size: 1.2rem;
+    }
+
+    .form-control, .btn-primary {
+        font-size: 0.9rem;
     }
 }
