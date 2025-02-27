@@ -51,8 +51,6 @@ document.addEventListener('DOMContentLoaded', function ()
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + token,
                 },
-                // If you need to send data in the body:
-                // body: JSON.stringify({ key: 'value' }),
             })
                 .then(response =>
                 {
