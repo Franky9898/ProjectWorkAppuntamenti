@@ -14,3 +14,24 @@ function toggleMenu() {
     const menu = document.getElementById('navbarMenu');
     menu.classList.toggle('show');
 }
+
+deleteButton = document.getElementById("eliminaAccount");
+
+deleteButton.addEventListener("click", deleteAccount);
+
+function deleteAccount() {
+    let token = localStorage.getItem("authToken");
+    fetch('http://localhost:8080/users/deleteUser', {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        },
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            displaySessions(data);
+        })
+    .catch(error => console.error("Errore nel recupero dati:", error));
+}
