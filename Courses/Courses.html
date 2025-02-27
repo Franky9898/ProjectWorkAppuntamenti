@@ -28,42 +28,44 @@
                         <li><a href="../About/About.html">Chi Siamo</a></li>
                     </ul>
                     <a href="../Login/login.html" class="btn-login" id="loginButton">Accedi / Registrati</a>
-    
+
                     <div class="mx-4" id="logoutIcon" style="color: white; display: none; cursor: pointer;">
                         <i class="fa-solid fa-right-from-bracket fa-xl"></i>
                     </div>
-    
+
                 </div>
             </nav>
         </header>
 
-        <div class="central-container">
+        <main style="height: 100vh;">
+            <div class="central-container">
 
-            <div class="container">
+                <div class="container">
 
-                <form class="row g-3 mb-4">
-                    <div class="col-sm-4">
-                        <label for="coachSelect" class="form-label">Coach</label>
-                        <select class="form-select" id="coachSelect" required>
-                            <option selected disabled>Choose...</option>
-                            <option value="Giorgio">Vanni</option>
-                            <option value="Frascella">Frascella</option>
-                            <option value="Martini">Martini</option>
-                        </select>
+                    <form class="row g-3 mb-4" id="fakeFilter">
+                        <div class="col-sm-4">
+                            <label for="coachSelect" class="form-label">Coach</label>
+                            <select class="form-select" id="coachSelect" required>
+                                <option selected disabled>Choose...</option>
+                                <option value="Giorgio">Vanni</option>
+                                <option value="Frascella">Frascella</option>
+                                <option value="Martini">Martini</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-8 col-right">
+                            <button id="all-btn" class="btn centre-btn">All</button>
+                        </div>
+                    </form>
+
+                    <div id="courses-container" class="courses-container">
+
+
+
                     </div>
-                    <div class="col-sm-8 col-right">
-                        <button id="all-btn" class="btn centre-btn">All</button>
-                    </div>
-                </form>
-
-                <div id="courses-container" class="courses-container">
-
-
 
                 </div>
-
             </div>
-        </div>
+        </main>
 
         <footer class="footer">
             <div class="social-icons">
@@ -95,6 +97,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+        <script src="../Homepage/index.js"></script>
     </body>
 
 </html>
