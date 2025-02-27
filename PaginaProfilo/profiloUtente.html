@@ -16,7 +16,7 @@
 
         <header>
             <nav class="navbar">
-                <a href="index.html" class="navbar-brand">
+                <a href="../Homepage/index.html" class="navbar-brand">
                     <img src="../Homepage/Logo_provvisorio.png" alt="Gym Logo">
                 </a>
                 <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
@@ -24,16 +24,15 @@
                     <ul>
                         <li><a href="../Homepage/index.html">Home</a></li>
                         <li><a href="../Courses/Courses.html">Corsi</a></li>
-                        <li><a href="#">Abbonamenti</a></li>
                         <li><a href="../FAQ/FAQ.html">FAQ</a></li>
                         <li><a href="../About/About.html">Chi Siamo</a></li>
                     </ul>
                     <a href="../Login/login.html" class="btn-login" id="loginButton">Accedi / Registrati</a>
-
+        
                     <div class="mx-4" id="logoutIcon" style="color: white; display: none;">
                         <i class="fa-solid fa-right-from-bracket fa-xl"></i>
                     </div>
-
+                    
                 </div>
             </nav>
         </header>
@@ -41,15 +40,15 @@
         <div class="container-fluid-profilo">
             <div class="profiloIstruttore-box">
                 <div class="card-istruttoreProfilo">
-                    <div class="card-headerbg-primary text-white text-center">
-                        <h3>Profilo Utente</h3>
+                    <div class="card-headerbg-primary text-black text-center">
+                        <h3 style="font-weight: bolder;">PROFILO UTENTE</h3>
                     </div>
                     <div class="card-body">
                         <div class="text-center mb-4">
                             <img src="https://placehold.co/150x150" alt="profilo" class="rounded-circle img-thumbnail"
                                 width="150" height="150">
                             <div class="mt-2">
-                                <button class="btn btn-outline-secondary btn-sm" type="button" id="editPhoto"
+                                <button class="btn btn-dark btn-sm" type="button" id="editPhoto"
                                     onclick="">Modifica foto</button>
                             </div>
                         </div>
@@ -67,7 +66,7 @@
                             <label for="userClass" class="form-label">Registrazioni corsi</label>
                             <div class="input-group justify-content-around">
                                 <div>
-                                    <button class="btn btn-outline-secondary my-2" type="button" id="historyButton"
+                                    <button class="btn btn-dark my-2" type="button" id="historyButton"
                                         onclick="location.href='../Storico/storico.html'">
                                         Storico registrazioni
                                     </button>
@@ -88,11 +87,6 @@
                                     <div class="input-group mb-2">
                                         <input type="email" class="form-control" id="email" value="john.wick@mail.com"
                                             readonly>
-                                        <button class="btn btn-outline-secondary rounded-right" type="button"
-                                            id="editEmail" data-bs-toggle="collapse" data-bs-target="#newEmail"
-                                            aria-expanded="false" aria-controls="modifyEmail">
-                                            Modifica
-                                        </button>
                                     </div>
                                     <div class="row">
                                         <div class="collapse" id="newEmail">
@@ -117,7 +111,7 @@
                                         <div class="input-group mb-2">
                                             <input type="password" class="form-control" id="password" value="cagnolino"
                                                 readonly>
-                                            <button class="btn btn-outline-secondary rounded-right" type="button"
+                                            <button class="btn btn-dark rounded-right" type="button"
                                                 id="editPassword" data-bs-toggle="collapse"
                                                 data-bs-target="#newPassword" aria-expanded="false"
                                                 aria-controls="modifyPassword">
