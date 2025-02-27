@@ -58,139 +58,129 @@
 .btn-login:hover {
   background-color: #c0392b;
 }
-.profilo .rounded-right
-{
-    border-top-right-radius: 0.3rem !important;
-  border-bottom-right-radius: 0.3rem !important;
+body{
+  background-color: #6c7d8f;
+  background-image: url(CoachImg.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+.card-header{
+  background-color: transparent;
+}
+.profiloIstruttore-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 150px;
 }
 
-.profili .container{
-  max-width: 1200px;
-  margin: 30px auto;
-}
-.profilo .card{
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
-  padding: 20px;
-  width: 100%;
-  margin: 0 auto;
+.card-istruttoreProfilo {
+  width: 800px !important;
+  height: 800px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 15px !important ;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 
-.profilo .card-header{
+.profilo .card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.profilo .card-header {
   border-radius: 15px 15px 0 0;
+  background-color: #007bff;
+  color: white;
   padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
 }
-.profilo .rounded-circle{
-  border: 3px solid #007bff;
+
+.profilo .rounded-circle {
+  border: 4px solid #007bff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profilo .rounded-circle:hover{
-  transform: scale(1.05);
-}
-.profilo .form-label i {
-  margin-right: 10px;
-  color: #dce8f5;
+.profilo .rounded-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
 }
 
 .profilo .form-control {
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    transition: border-color 0.3s;
-}
-
-.profilo .form-control:focus {
-    border-color: #007bff;
-    box-shadow: none;
-}
-
-.profilo .btn-outline-secondary {
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
-
-.profilo .btn-outline-secondary:hover {
-    background-color: #e0e0e0;
-}
-
-.profilo .btn-primary {
-    border-radius: 8px;
-    transition: transform 0.2s;
-}
-
-.profilo .btn-primary:hover {
-    transform: scale(1.05);
-}
-
-.profilo .btn-danger {
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-weight: 600;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.profilo .btn-danger:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.5);
-}
-
-.profilo .collapse {
-    transition: height 0.3s ease-in-out;
-}
-.profilo .form-control {
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #ddd;
-  padding: 10px;
-  transition: border-color 0.3s;
+  padding: 12px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .profilo .form-control:focus {
   border-color: #007bff;
-  box-shadow: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
 }
 
-.profilo .btn-outline-secondary {
+ .btn-outline-secondary,
+ .btn-primary{
   border-radius: 8px;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease, background-color 0.3s;
+  border-color: #000000 !important;
+  color: #010203;
 }
 
 .profilo .btn-outline-secondary:hover {
-  background-color: #e0e0e0;
-}
-
-.profilo .btn-primary {
-  border-radius: 8px;
-  transition: transform 0.2s;
+  background-color: #f1f1f1;
 }
 
 .profilo .btn-primary:hover {
   transform: scale(1.05);
-}
-
-.profilo .btn-danger {
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-weight: 600;
-  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #0056b3;
 }
 
 .profilo .btn-danger:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.5);
+  background-color: #e03e3e;
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+}
+
+.profilo .input-group .btn {
+  margin-left: 10px;
 }
 
 .profilo .collapse {
   transition: height 0.3s ease-in-out;
 }
-/* Aggiungi icone ai campi */
-.profilo .form-label[for="firstName"]::before { content: '\f007'; font-family: 'Font Awesome 5 Free'; font-weight: 900; margin-right: 5px; color: #007bff; }
-.profilo .form-label[for="lastName"]::before { content: '\f007'; font-family: 'Font Awesome 5 Free'; font-weight: 900; margin-right: 5px; color: #007bff; }
-.profilo .form-label[for="email"]::before { content: '\f0e0'; font-family: 'Font Awesome 5 Free'; font-weight: 900; margin-right: 5px; color: #007bff; }
-.profilo .form-label[for="password"]::before { content: '\f023'; font-family: 'Font Awesome 5 Free'; font-weight: 900; margin-right: 5px; color: #007bff; }
 
+.profilo .form-label i {
+  margin-right: 10px;
+  color: #007bff;
+  font-size: 1.2rem;
+}
+
+/* Migliora la visibilità delle icone */
+.profilo .form-label[for="firstName"]::before,
+.profilo .form-label[for="lastName"]::before,
+.profilo .form-label[for="email"]::before,
+.profilo .form-label[for="password"]::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.profilo .row {
+  margin-top: 20px;
+}
 .footer-spacer{
   height: 200px;
 }
