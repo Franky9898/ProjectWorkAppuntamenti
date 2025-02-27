@@ -57,6 +57,9 @@
 .btn-login:hover {
     background-color: #c0392b;
 }
+.footer-spacer{
+    height: 170px;
+}
 .social-icons {
     text-align: center;
     margin-bottom: 5px;

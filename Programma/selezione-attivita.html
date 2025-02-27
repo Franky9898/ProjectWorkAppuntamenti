@@ -6,8 +6,29 @@
     <title>Selezione Attività</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="attivita.css">
 </head>
 <body>
+    
+    <header>
+        <nav class="navbar">
+            <a href="../Homepage/index.html" class="navbar-brand">
+                <img src="../Homepage/Logo_provvisorio.png" alt="Gym Logo">
+            </a>
+            <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+            <div class="navbar-menu" id="navbarMenu">
+                <ul>
+                    <li><a href="../Homepage/index.html">Home</a></li>
+                    <li><a href="../Courses/Courses.html">Corsi</a></li>
+                    <li><a href="#">Abbonamenti</a></li>
+                    <li><a href="../FAQ/FAQ.html">FAQ</a></li>
+                    <li><a href=".//About.html">Chi Siamo</a></li>
+                </ul>
+                <a href="../Login/login.html" class="btn-login">Accedi / Registrati</a>
+            </div>
+        </nav>
+    </header>
+
     <div class="container mt-5">
         <h2 class="text-center mb-4">Seleziona la tua attività</h2>
         <div class="list-group">
@@ -16,9 +37,39 @@
             <a href="dettagli-attivita.html?attivita=Zumba" class="list-group-item list-group-item-action">Zumba</a>
             <a href="dettagli-attivita.html?attivita=CrossFit" class="list-group-item list-group-item-action">CrossFit</a>
         </div>
+
+        <div class="main-content">
+        </div>
+        <div class="footer-spacer"></div>
     </div>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.x.com" target="_blank" class="social-icon">
+                <i class="fab fa-x"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="container">
+            <p>&copy; 2025 Fitness Booking. Tutti i diritti riservati.</p>
+            <p>
+                <a href="../Privacy-policy/Privacy-policy.html">Privacy Policy</a> | 
+                <a href="../Termini e condizioni/Termini e condizioni.html">Termini e Condizioni</a> | 
+                <a href="../Contatti/Contatti.html">Contattaci</a>
+            </p>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS e dipendenze -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="selezioneattivita.js"></script>
 </body>
 </html>
