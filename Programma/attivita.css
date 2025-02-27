@@ -57,74 +57,8 @@
 .btn-login:hover {
     background-color: #c0392b;
 }
-
-body {
-    background-color: #f8f9fa;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main.container { 
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    flex: 1;
-}
-
-h2 {
-    color: #343a40;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.table {
-    margin-top: 20px;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
-
-.table thead th {
-    background-color: #343a40;
-    color: #ffffff;
-    font-weight: bold;
-    border: none;
-    text-align: center;
-}
-
-.table tbody tr {
-    transition: background-color 0.3s ease;
-}
-
-.table tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-.table tbody td {
-    border-top: 1px solid #dee2e6;
-    text-align: center;
-}
-
-.stato-confermato {
-    color: #28a745;
-    font-weight: bold;
-}
-
-.stato-cancellato {
-    color: #dc3545;
-    font-weight: bold;
-}
-
-.stato-in-attesa {
-    color: #ffc107;
-    font-weight: bold;
+.footer-spacer{
+    height: 500px;
 }
 
 .social-icons {
@@ -171,57 +105,7 @@ h2 {
     text-decoration: underline;
 }
 
-@media (max-width: 992px) {
-    .navbar-collapse {
-        display: none;
-    }
-
-    .navbar-toggler {
-        display: block;
-    }
-
-    .navbar-collapse.show {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        background-color: #36495c;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        padding: 10px 0;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-nav .nav-item {
-        margin: 10px 0;
-    }
-}
-
-
 @media (max-width: 768px) {
-    .table thead {
-        display: none;
-    }
-
-    .table tbody td {
-        display: block;
-        width: 100%;
-        text-align: left;
-        border-bottom: 1px solid #dee2e6;
-    }
-
-    .table tbody td:before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 5px;
-    }
-
     .navbar-menu {
         display: none;
         flex-direction: column;
@@ -249,11 +133,11 @@ h2 {
         display: block;
     }
 
-    main.container {
-        padding: 15px;
+    .FAQ-container {
+        padding: 30px 0;
     }
 
-    h2 {
-        font-size: 1.5rem;
+    .accordion {
+        width: 95%;
     }
 }

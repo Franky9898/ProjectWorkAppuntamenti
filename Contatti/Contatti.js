@@ -13,3 +13,4 @@ document.addEventListener('DOMContentLoaded', function() {
         loginButton.href = '/profile.html';
     }    
 });
+
