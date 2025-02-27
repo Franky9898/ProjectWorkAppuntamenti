@@ -61,10 +61,17 @@ function deleteAccount() {
             "Authorization": "Bearer " + token
         },
     })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            displaySessions(data);
+        .then(response =>
+        {
+            if (response.ok)
+            {
+                console.log('Account deleted successful');
+                localStorage.clear();
+                window.location.href = '../Homepage/index.html';
+            } else
+            {
+                console.error('Account deletion failed:', response.status);
+            }
         })
     .catch(error => console.error("Errore nel recupero dati:", error));
 }
