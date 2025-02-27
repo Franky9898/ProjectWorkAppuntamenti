@@ -1,4 +1,84 @@
-document.addEventListener('DOMContentLoaded', function () {
+Container = document.getElementById("sessions-container");
+
+function loadSessionsOnload() {
+    let token = localStorage.getItem("authToken");
+    fetch('http://localhost:8080/sessions/showUserSessions', {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        },
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            displaySessions(data);
+        })
+    .catch(error => console.error("Errore nel recupero dati:", error));
+}
+
+function displaySessions(session){
+    const sessionCard = session.map(session => {
+    return `
+                <div class="col-3 col-centre">
+                    <p>${session.course.title}</p>
+                </div>
+
+                <div class="col-3 col-centre">
+                    <p>${session.startingTime}</p>
+                </div>
+
+                <div class="col-3 col-centre">
+                    <p>${session.startingTime}</p>
+                </div>
+
+                <div class="col-3 col-centre">
+                    <p><i class="fas fa-trash-alt"></i></p>
+                </div>
+
+
+    `;
+    }).join('');
+    Container.innerHTML += `<div class="row row-style">${sessionCard}</div>`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*document.addEventListener('DOMContentLoaded', function () {
     // Dati fittizi
     const datiFittizi = [
         { id: 1, corso: "Yoga", dataPrenotazione: "2023-10-01", stato: "Confermato" },
@@ -56,7 +136,7 @@ function eliminaPrenotazione(id) {
         alert(`Prenotazione con ID: ${id} eliminata (simulazione)`);
         // Qui puoi fare una chiamata API per eliminare la prenotazione
     }
-}
+}*/
 
 function toggleMenu() {
     const menu = document.getElementById('navbarMenu');

@@ -23,27 +23,49 @@
                 <li><a href="../FAQ/FAQ.html">FAQ</a></li>
                 <li><a href="../About/About.html">Chi Siamo</a></li>
             </ul>
-            <a href="../Login/login.html" class="btn-login">Accedi / Registrati</a>
+            <a id="loginButton" href="../Login/login.html" class="btn-login">Accedi / Registrati</a>
         </div>
     </nav>
 </header>
 
-<body>
+<body onload="loadSessionsOnload()">
     <main class="container">
         <h2 class="text-center mb-4">Storico Prenotazioni</h2>
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td data-label="ID Prenotazione"></td>
-                    <td data-label="Nome Corso"></td>
-                    <td data-label="Data Prenotazione"></td>
-                    <td data-label="Stato" class="stato-confermato">Confermato</td>
-                    <td data-label="Azioni"> <i class="fas fa-trash-alt"></i></td>
-                </tr>
-            <tbody id="storicoPrenotazioni">
-            </tbody>
-        </table>
+
+        <div class="container container-style">
+            <div class="row">
+
+                    <div class="col-12">
+                        <div class="container">
+                            <div id="sessions-container" class="row row-style">
+            
+                                <div class="col-3 col-centre col-header">
+                                    <p>Corso</p>
+                                </div>
+
+                                <div class="col-3 col-centre col-header">
+                                    <p>Data</p>
+                                </div>
+
+                                <div class="col-3 col-centre col-header">
+                                    <p>Orario</p>
+                                </div>
+
+                                <div class="col-3 col-centre col-header">
+                                    <p>Azioni</p>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
     </main>
+
     <footer class="footer">
         <div class="social-icons">
             <a href="https://www.facebook.com" target="_blank" class="social-icon">
@@ -72,3 +94,18 @@
     <script src="Storico.js"></script>
 </body>
 </html>
+
+<!--
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td data-label="ID Prenotazione"></td>
+                    <td data-label="Nome Corso"></td>
+                    <td data-label="Data Prenotazione"></td>
+                    <td data-label="Stato" class="stato-confermato">Confermato</td>
+                    <td data-label="Azioni"> <i class="fas fa-trash-alt"></i></td>
+                </tr>
+            <tbody id="storicoPrenotazioni">
+            </tbody>
+        </table>
+-->
