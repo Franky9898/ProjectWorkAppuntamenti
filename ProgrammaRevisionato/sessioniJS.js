@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
                 const room = document.createElement('p');
                 room.className = 'card-text';
-                room.textContent = 'Sala: ' + session.room.id;
+                room.textContent = 'Sala: ' + session.room;
 
                 const startingTime = document.createElement('p');
                 startingTime.className = 'card-text';
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
                 const sessionDay = document.createElement('p');
                 sessionDay.className = 'card-text';
-                sessionDay.textContent = 'Giorno: ' + session.sessionDay.day;
+                sessionDay.textContent = 'Giorno: ' + session.sessionDay;
 
                 const participants = document.createElement('p');
                 participants.className = 'card-text';

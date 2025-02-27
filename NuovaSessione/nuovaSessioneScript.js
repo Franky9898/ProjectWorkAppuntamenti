@@ -15,7 +15,7 @@ function toggleMenu()
 {
     const menu = document.getElementById('navbarMenu');
     menu.classList.toggle('show');
-} 
+}
 
 document.addEventListener("DOMContentLoaded", function ()
 {
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function ()
             course: {
                 title: classCategory
             },
-            weekDay: {
+            sessionDay: {
                 id: classDay
             }
         };
@@ -122,7 +122,7 @@ function fetchCourses(token)
 
 function fetchWeekDays(token)
 {
-    fetch('http://localhost:8080/gyms', {
+    fetch('http://localhost:8080/courses/gymWeekDays', {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token
@@ -136,7 +136,7 @@ function fetchWeekDays(token)
         {
             const daySelect = document.getElementById("classDay");
             daySelect.innerHTML = '<option selected disabled>Scegli un giorno...</option>';
-            openDays.forEach(function (day)
+            openDays.forEach(function (weekday)
             {
                 const option = document.createElement("option");
                 option.value = weekday.id;
@@ -152,7 +152,7 @@ function fetchWeekDays(token)
 
 function fetchRooms(token)
 {
-    fetch('http://localhost:8080/gyms', {
+    fetch('http://localhost:8080/courses/gymRooms', {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token
