@@ -46,3 +46,32 @@ function fetchUserDetails(token)
             console.error("Errore nel recupero dettagli utente:", error);
         });
 }
+
+
+deleteButton = document.getElementById("eliminaAccount");
+
+deleteButton.addEventListener("click", deleteAccount);
+
+function deleteAccount() {
+    let token = localStorage.getItem("authToken");
+    fetch('http://localhost:8080/users/deleteUser', {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        },
+    })
+        .then(response =>
+        {
+            if (response.ok)
+            {
+                console.log('Account deleted successful');
+                localStorage.clear();
+                window.location.href = '../Homepage/index.html';
+            } else
+            {
+                console.error('Account deletion failed:', response.status);
+            }
+        })
+    .catch(error => console.error("Errore nel recupero dati:", error));
+}

@@ -36,39 +36,44 @@
           </div>
       </nav>
   </header>
-  
-    <div class="form-container-filtroSessioni">
-      <div class="glass-card-filtro">
-        <div class="filtroSessioni-card-body">
+
+    <div class="central-container">
+
+      <div class="container form-container-filtroSessioni">
+        <div class="glass-card-filtro">
           <h5 class="card-title">Filtra le Sessioni</h5>
-          <form class="row g-3 mb-4">
-            <div class="col-sm-3">
-              <label for="timeSlot" class="form-label">Orario</label>
-              <select class="form-select" id="timeSlot" required>
-                <option selected disabled>Scegli...</option>
-                <option value="08:00:00">08:00 AM - 09:00 AM</option>
-                <option value="09:00:00">09:00 AM - 10:00 AM</option>
-                <option value="19:00:00">19:00 PM - 20:00 PM</option>
-              </select>
-            </div>
-            <div class="col-sm-3">
-              <label for="coachSelect" class="form-label">Coach</label>
-              <select class="form-select" id="coachSelect" required>
-                <option selected disabled>Scegli...</option>
-                <option value="Giorgio">Vanni</option>
-                <option value="Frascella">Frascella</option>
-                <option value="Martini">Martini</option>
-              </select>
-            </div>
-            <div class="col-sm-3">
-              <button id="all-btn" class="btn btn-primary">Tutti</button>
-            </div>
+          <form class="row g-3 mb-4 row-style">
+              <div class="col-4 col-sm-3">
+                  <label for="timeSlot" class="form-label text">Time Slot</label>
+                  <select class="form-select" id="timeSlot" required>  <option selected disabled>Choose...</option>
+                      <option value="08:00:00">08:00 AM - 09:00 AM</option>
+                      <option value="09:00:00">09:00 AM - 10:00 AM</option>
+                      <option value="19:00:00">19:00 PM - 20:00 PM</option>
+                  </select>
+              </div>
+              <div class="col-4 col-sm-3">
+                  <label for="coachSelect" class="form-label text">Coach</label>
+                  <select class="form-select" id="coachSelect" required>
+                      <option selected disabled>Choose...</option>
+                      <option value="Giorgio">Vanni</option>
+                      <option value="Frascella">Frascella</option>
+                      <option value="Martini">Martini</option>
+                  </select>
+              </div>
+              <div class="col-4 col-sm-6 col-right">
+                  <button id="all-btn" class="btn centre-btn">All</button>
+              </div>
           </form>
-          <div id="sessions-container" class="sessions-container">
+
+          <div id="sessions-container" class="row row-style sessions-container">
+
+
+
           </div>
-        </div>
+
       </div>
     </div>
+  </div>
 
     <footer class="footer">
       <div class="social-icons">
@@ -103,3 +108,38 @@
   </body>
 
 </html>
+
+
+<!-- 
+<div class="form-container-filtroSessioni">
+      <div class="glass-card-filtro">
+          <h5 class="card-title">Filtra le Sessioni</h5>
+          <form class="row">
+            <div class="col-sm-4">
+              <label for="timeSlot" class="form-label">Orario</label>
+              <select class="form-select" id="timeSlot" required>
+                  <option selected disabled>Scegli...</option>
+                  <option value="08:00:00">08:00 AM - 09:00 AM</option>
+                  <option value="09:00:00">09:00 AM - 10:00 AM</option>
+                  <option value="19:00:00">19:00 PM - 20:00 PM</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <label for="coachSelect" class="form-label">Coach</label>
+              <select class="form-select" id="coachSelect" required>
+                <option selected disabled>Scegli...</option>
+                <option value="Giorgio">Vanni</option>
+                <option value="Frascella">Frascella</option>
+                <option value="Martini">Martini</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <button id="all-btn" class="btn btn-primary">Tutti</button>
+            </div>
+          </form>
+          <div id="sessions-container" class="sessions-container">
+            
+          </div>
+      </div>
+    </div>
+-->

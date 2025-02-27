@@ -37,33 +37,35 @@
             </nav>
         </header>
 
-        <div class="central-container">
+        <main style="height: 100vh;">
+            <div class="central-container">
 
-            <div class="container">
+                <div class="container">
 
-                <form class="row g-3 mb-4">
-                    <div class="col-sm-4">
-                        <label for="coachSelect" class="form-label">Coach</label>
-                        <select class="form-select" id="coachSelect" required>
-                            <option selected disabled>Choose...</option>
-                            <option value="Giorgio">Vanni</option>
-                            <option value="Frascella">Frascella</option>
-                            <option value="Martini">Martini</option>
-                        </select>
+                    <form class="row g-3 mb-4" id="fakeFilter">
+                        <div class="col-sm-4">
+                            <label for="coachSelect" class="form-label">Coach</label>
+                            <select class="form-select" id="coachSelect" required>
+                                <option selected disabled>Choose...</option>
+                                <option value="Giorgio">Vanni</option>
+                                <option value="Frascella">Frascella</option>
+                                <option value="Martini">Martini</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-8 col-right">
+                            <button id="all-btn" class="btn centre-btn">All</button>
+                        </div>
+                    </form>
+
+                    <div id="courses-container" class="courses-container">
+
+
+
                     </div>
-                    <div class="col-sm-8 col-right">
-                        <button id="all-btn" class="btn centre-btn">All</button>
-                    </div>
-                </form>
-
-                <div id="courses-container" class="courses-container">
-
-
 
                 </div>
-
             </div>
-        </div>
+        </main>
 
         <footer class="footer">
             <div class="social-icons">
