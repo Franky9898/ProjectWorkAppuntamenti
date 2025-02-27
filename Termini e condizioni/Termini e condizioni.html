@@ -6,11 +6,13 @@
     <title>Termini e Condizioni - Fitness Booking</title>
     <script src="https://kit.fontawesome.com/43e0cc1471.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="Termini e condizioni.css">
+    <script src="https://kit.fontawesome.com/40206e0025.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
-            <a href="../Homepage/index.html" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 <img src="../Homepage/Logo_provvisorio.png" alt="Gym Logo">
             </a>
             <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
@@ -22,10 +24,16 @@
                     <li><a href="../FAQ/FAQ.html">FAQ</a></li>
                     <li><a href="../About/About.html">Chi Siamo</a></li>
                 </ul>
-                <a href="../Login/login.html" class="btn-login">Accedi / Registrati</a>
+                <a href="../Login/login.html" class="btn-login" id="loginButton">Accedi / Registrati</a>
+
+                <div class="mx-4" id="logoutIcon" style="color: white; display: none; cursor: pointer;">
+                    <i class="fa-solid fa-right-from-bracket fa-xl"></i>
+                </div>
+
             </div>
         </nav>
     </header>
+    
     <main>
         <section>
             <h2>1. Accettazione dei Termini</h2>
@@ -64,6 +72,7 @@
             <p>Se hai domande o dubbi riguardo ai nostri Termini e Condizioni, puoi contattarci all'indirizzo email: <a href="mailto:terms@fitnessbooking.com">terms@fitnessbooking.com</a></p>
         </section>
     </main>
+    <div style="height: 7vh"></div>
 
     <div class="footer-spacer"></div>
 
@@ -85,11 +94,12 @@
         <div class="container">
             <p>&copy; 2025 Fitness Booking. Tutti i diritti riservati.</p>
             <p>
-                <a href="#">Privacy Policy</a> | 
-                <a href="#">Termini e Condizioni</a> | 
-                <a href="#">Contattaci</a>
+                <a href="../Privacy-policy/Privacy-policy.html">Privacy Policy</a> | 
+                <a href="../Termini e condizioni/Termini e condizioni.html">Termini e Condizioni</a> | 
+                <a href="../Contatti/Contatti.html">Contattaci</a>
             </p>
         </div>
     </footer>
+    <script src="../Homepage/linkProfileFunction.js"></script>
 </body>
 </html>
