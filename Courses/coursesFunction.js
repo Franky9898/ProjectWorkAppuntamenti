@@ -76,7 +76,7 @@ function toggleMenu() {
     menu.classList.toggle('show');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     const loginButton = document.getElementById('loginButton');
     const token = localStorage.getItem('authToken');
 
@@ -84,4 +84,4 @@ document.addEventListener('DOMContentLoaded', function() {
         loginButton.textContent = 'Profilo';
         loginButton.href = '/profile.html';
     }    
-});
+});*/

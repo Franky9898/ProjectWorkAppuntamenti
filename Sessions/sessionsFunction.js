@@ -61,7 +61,6 @@ function loadAllSessions(e) {
 
 function displaySessions(session){
     const sessionCard = session.map(session => {
-    //const coach = session.users.find(user => user.role === 'COACH');
     return `
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
