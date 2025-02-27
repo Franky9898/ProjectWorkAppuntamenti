@@ -9,12 +9,13 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/43e0cc1471.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="coursesStyle.css">
+        <script src="https://kit.fontawesome.com/40206e0025.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <header>
             <nav class="navbar">
-                <a href="../Homepage/index.html" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <img src="../Homepage/Logo_provvisorio.png" alt="Gym Logo">
                 </a>
                 <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
@@ -26,7 +27,12 @@
                         <li><a href="../FAQ/FAQ.html">FAQ</a></li>
                         <li><a href="../About/About.html">Chi Siamo</a></li>
                     </ul>
-                    <a id="loginButton" href="../Login/login.html" class="btn-login">Accedi / Registrati</a>
+                    <a href="../Login/login.html" class="btn-login" id="loginButton">Accedi / Registrati</a>
+    
+                    <div class="mx-4" id="logoutIcon" style="color: white; display: none; cursor: pointer;">
+                        <i class="fa-solid fa-right-from-bracket fa-xl"></i>
+                    </div>
+    
                 </div>
             </nav>
         </header>

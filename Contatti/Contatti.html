@@ -1,98 +1,104 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatti - Fitness Booking</title>
-    <script src="https://kit.fontawesome.com/43e0cc1471.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Contatti.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <a href="../Homepage/index.html" class="navbar-brand">
-                <img src="../Homepage/Logo_provvisorio.png" alt="Gym Logo">
-            </a>
-            <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
-            <div class="navbar-menu" id="navbarMenu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contatti - Fitness Booking</title>
+        <script src="https://kit.fontawesome.com/43e0cc1471.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="Contatti.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://kit.fontawesome.com/40206e0025.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="navbar-brand">
+                    <img src="../Homepage/Logo_provvisorio.png" alt="Gym Logo">
+                </a>
+                <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+                <div class="navbar-menu" id="navbarMenu">
+                    <ul>
+                        <li><a href="../Homepage/index.html">Home</a></li>
+                        <li><a href="../Courses/Courses.html">Corsi</a></li>
+                        <li><a href="#">Abbonamenti</a></li>
+                        <li><a href="../FAQ/FAQ.html">FAQ</a></li>
+                        <li><a href="../About/About.html">Chi Siamo</a></li>
+                    </ul>
+                    <a href="../Login/login.html" class="btn-login" id="loginButton">Accedi / Registrati</a>
+    
+                    <div class="mx-4" id="logoutIcon" style="color: white; display: none; cursor: pointer;">
+                        <i class="fa-solid fa-right-from-bracket fa-xl"></i>
+                    </div>
+    
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <section>
+                <h2>Informazioni di Contatto</h2>
+                <p>Siamo qui per aiutarti! Se hai domande, dubbi o feedback, non esitare a contattarci.</p>
                 <ul>
-                    <li><a href="../Homepage/index.html">Home</a></li>
-                    <li><a href="../Courses/Courses.html">Corsi</a></li>
-                    <li><a href="#">Abbonamenti</a></li>
-                    <li><a href="../FAQ/FAQ.html">FAQ</a></li>
-                    <li><a href="../About/About.html">Chi Siamo</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:info@fitnessbooking.com">info@fitnessbooking.com</a>
+                    </li>
+                    <li><strong>Telefono:</strong> +39 012 345 6789</li>
+                    <li><strong>Indirizzo:</strong> Via Esempio 123, 00100 Roma, Italia</li>
                 </ul>
-                <a href="../Login/login.html" class="btn-login">Accedi / Registrati</a>
+            </section>
+            <section>
+                <h2>Modulo di Contatto</h2>
+                <p>Inviaci un messaggio utilizzando il modulo sottostante:</p>
+                <form action="#" method="POST">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Messaggio:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Invia Messaggio</button>
+                    <h2>Dove Trovarci</h2>
+                    <p>Visita la nostra palestra in Via Esempio 123, 00100 Roma, Italia.</p>
+                    <iframe width="100%" height="400" style="border:0" loading="lazy" allowfullscreen
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.0248726636905!2d12.470308977500205!3d41.89232217124036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6048900af4b7%3A0xba1c43c3cf771f26!2sVia%20delle%20Zoccolette%2C%2000186%20Roma%20RM!5e0!3m2!1sit!2sit!4v1740585920479!5m2!1sit!2sit">
+                    </iframe>
+                </form>
+            </section>
+            <div class="footer-spacer"></div>
+
+        </main>
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.x.com" target="_blank" class="social-icon">
+                    <i class="fab fa-x"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
             </div>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Informazioni di Contatto</h2>
-            <p>Siamo qui per aiutarti! Se hai domande, dubbi o feedback, non esitare a contattarci.</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:info@fitnessbooking.com">info@fitnessbooking.com</a></li>
-                <li><strong>Telefono:</strong> +39 012 345 6789</li>
-                <li><strong>Indirizzo:</strong> Via Esempio 123, 00100 Roma, Italia</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Modulo di Contatto</h2>
-            <p>Inviaci un messaggio utilizzando il modulo sottostante:</p>
-            <form action="#" method="POST">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
+            <div class="container">
+                <p>&copy; 2025 Fitness Booking. Tutti i diritti riservati.</p>
+                <p>
+                    <a href="../Privacy-policy/Privacy-policy.html">Privacy Policy</a> |
+                    <a href="../Termini e condizioni/Termini e condizioni.html">Termini e Condizioni</a> |
+                    <a href="../Contatti/Contatti.html">Contattaci</a>
+                </p>
+            </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        </footer>
+        <script src="Contatti.js"></script>
+        <script src="../Homepage/linkProfileFunction.js"></script>
+    </body>
 
-                <label for="message">Messaggio:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Invia Messaggio</button>
-                 <h2>Dove Trovarci</h2>
-                <p>Visita la nostra palestra in Via Esempio 123, 00100 Roma, Italia.</p>
-                <iframe 
-                width="100%"
-                height="400"
-                style="border:0"
-                loading="lazy"
-                allowfullscreen
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.0248726636905!2d12.470308977500205!3d41.89232217124036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6048900af4b7%3A0xba1c43c3cf771f26!2sVia%20delle%20Zoccolette%2C%2000186%20Roma%20RM!5e0!3m2!1sit!2sit!4v1740585920479!5m2!1sit!2sit">
-                </iframe>
-            </form>
-        </section>
-        <div class="footer-spacer"></div>
-        
-    </main>
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.x.com" target="_blank" class="social-icon">
-                <i class="fab fa-x"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
-
-        </div>
-        <div class="container">
-            <p>&copy; 2025 Fitness Booking. Tutti i diritti riservati.</p>
-            <p>
-                <a href="../Privacy-policy/Privacy-policy.html">Privacy Policy</a> | 
-                <a href="../Termini e condizioni/Termini e condizioni.html">Termini e Condizioni</a> | 
-                <a href="../Contatti/Contatti.html">Contattaci</a>
-            </p>
-        </div>
-        
-    </footer>
-    <script src="Contatti.js"></script>
-    <script src="../Homepage/linkProfileFunction.js"></script>
-</body>
 </html>
