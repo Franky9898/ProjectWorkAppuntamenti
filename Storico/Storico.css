@@ -59,23 +59,34 @@
 }
 
 body {
-    background-color: #f8f9fa;
+    background-image: url(TollWall.jpg);
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
 }
 
 main.container { 
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    height: 800px;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 30px;
     flex: 1;
 }
 
 h2 {
-    color: #343a40;
+    color: #020f1c;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
@@ -127,20 +138,27 @@ h2 {
     font-weight: bold;
 }*/
 .container-style{
-    margin-top: 25px !important;
+    margin-top: 25px !important;;
 }
 
+.col-header p{
+    color:#020f1c;
+    font-weight: bold;
+} 
+
 .col-header{
-    border-top: 1px solid #dee2e6;
-    background-color: #f1f1f1;
+    border-top: 1px solid transparent;
+    background-color: transparent;
     text-align: center;
+    border:1px solid black;
 }
 
 .col-centre{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid transparent;
+    border:1px solid rgba(255, 255, 255, 0.1);;
 }
 .row-style{
     width: 100%;
