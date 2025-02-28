@@ -92,6 +92,10 @@ h2 {
     text-align: center;
 }
 
+p {
+    color: white;
+}
+
 /*.table {
     margin-top: 20px;
     border-collapse: separate;
