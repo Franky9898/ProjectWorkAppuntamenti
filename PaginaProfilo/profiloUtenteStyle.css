@@ -74,18 +74,18 @@
     display: flex;
     justify-content: center !important;
     align-items: center !important;
-    min-height: 100vh; /* Usa min-height per evitare che il contenitore sia troppo piccolo se il contenuto è poco */
+    min-height: 100vh;
     margin: 0;
-    width: 100%; /* Aggiungi questa linea */
+    width: 100%;
 }
 .card-body {
-    width: 100%;                /* Fa sì che il corpo della card si estenda per tutta la larghezza */
+    width: 100%;
     padding: 20px;
 }
   
 .card-istruttoreProfilo {
     width: 800px;
-    max-width: 90%; /* Aggiungi questa linea */
+    max-width: 90%;
     height: auto;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -96,10 +96,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: auto; /* Aggiungi questa linea */
+    margin: auto;
 }
 .card-headerbg-primary {
-    width: 100%;  /* Aggiungi questa per far sì che il titolo si estenda su tutta la larghezza della card */
+    width: 100%;
     text-align: center;
     padding: 20px 0;
     background-color: transparent;
@@ -182,7 +182,6 @@
     font-size: 1.2rem;
   }
   
-  /* Migliora la visibilità delle icone */
   .profilo .form-label[for="firstName"]::before,
   .profilo .form-label[for="lastName"]::before,
   .profilo .form-label[for="email"]::before,
@@ -341,13 +340,13 @@
   
   @media (max-width: 768px) {
     .card-istruttoreProfilo {
-        width: 95%; /* O una percentuale che funziona meglio per te */
+        width: 95%;
     }
 }
 
 @media (max-width: 576px) {
     .card-istruttoreProfilo {
-        width: 100%; /* Occupare l'intera larghezza su schermi molto piccoli */
-        padding: 10px; /* Ridurre il padding interno */
+        width: 100%;
+        padding: 10px; 
     }
 }
