@@ -1,21 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('OIP.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #36495c;
-    padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #4a6572;
-    z-index: 2;
+    padding: 10px 20px;
 }
 
 .navbar-brand img {
-    height: 75px;
+    height: 60px;
 }
 
 .navbar-menu {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
@@ -27,14 +37,13 @@
 }
 
 .navbar-menu li {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .navbar-menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 12px;
 }
 
 .navbar-toggler {
@@ -44,6 +53,7 @@
     color: white;
     font-size: 24px;
 }
+
 .btn-login {
     background-color: #e74c3c;
     color: white;
@@ -51,116 +61,112 @@
     border-radius: 20px;
     padding: 8px 15px;
     transition: background 0.3s ease;
-    margin-left: 30px;
 }
 
 .btn-login:hover {
     background-color: #c0392b;
 }
-.form-container-addCoach{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #a8edea, #fed6e3);
-}
 
-.glass-container-addCoach{
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 30px;
-    width: 400px;
-}
-.addCoach-box{
-    width: 800px;
-    height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Glass Container for Main Content */
+.container.my-5 {
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    margin-bottom: 150px;
 }
-.footer-spacer{
-    height: 170px;
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.1s;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
 }
+
+/* Card Header */
+.card-header {
+    background-color: #E5E1DA !important;
+    color: #333 !important;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Card Body */
+.card-body {
+    background-color: #F1F0E8 !important;
+    padding: 20px;
+}
+
+/* Button Styling (Overrides Bootstrap’s .btn-primary) */
+.btn-primary {
+    background-color: #B3C8CF;
+    border-color: #89A8B2;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #89A8B2;
+    border-color: #89A8B2;
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #dad7ce;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 .social-icons {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-
 .social-icon {
-    font-size: 24px;
-    margin: 0 15px;
-    color: #fff; 
+    font-size: 30px;
+    margin: 0 20px;
+    color: #fff;
     transition: color 0.3s ease;
 }
 
 .social-icon:hover {
     color: #312a0b;
 }
-.footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 5px 0 !important;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    z-index: 100;
-    opacity: 1;
-    padding-bottom: 5px !important;
-    font-size: 14px
-}
 
-.footer a {
-    color: #dad7ce;
-    text-decoration: none;
-    margin: 0 8px;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
+/* Responsive Navbar */
 @media (max-width: 992px) {
-    .navbar-collapse {
-        display: none;
-    }
-
     .navbar-toggler {
         display: block;
     }
-
-    .navbar-collapse.show {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        background-color: #36495c;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        padding: 10px 0;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-nav .nav-item {
-        margin: 10px 0;
-    }
 }
-
 
 @media (max-width: 768px) {
     .navbar-menu {
@@ -172,53 +178,14 @@
         background-color: #36495c;
         width: 100%;
     }
-
     .navbar-menu.show {
         display: flex;
     }
-
     .navbar-menu ul {
         flex-direction: column;
         text-align: center;
     }
-
     .navbar-menu li {
         margin: 10px 0;
-    }
-
-    .navbar-toggler {
-        display: block;
-    }
-}
-
-@media (max-width: 576px){
-    .navbar-brand img{
-        height: 50px;
-    }
-    .hero-content h1{
-        font-size: 1.8rem;
-    }
-    .hero-content p{
-        font-size: 0.9rem;
-    }
-    .footer{
-        padding: 15px 0;
-    }
-}
-@media (max-width: 992px) {
-    .nuovoCorso .container {
-        width: 60% !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .nuovoCorso .container {
-        width: 80% !important;
-    }
-}
-
-@media (max-width: 576px) {
-    .nuovoCorso .container {
-        width: 95% !important;
     }
 }
