@@ -1,19 +1,22 @@
 //Funzione di switch del  bottone login/register al bottone Profilo
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function ()
+{
     const loginButton = document.getElementById('loginButton');
     const token = localStorage.getItem('authToken');
 
-    if(token != null) {
+    if (token != null)
+    {
         loginButton.textContent = 'Profilo';
         loginButton.href = '/profile.html';
-    }    
+    }
 });
 
 //funzione per far si che durante il rimpicciolimento dello schermo spunti un toggle per il menu header
-function toggleMenu() {
+function toggleMenu()
+{
     const menu = document.getElementById('navbarMenu');
     menu.classList.toggle('show');
-}document.addEventListener("DOMContentLoaded", function () 
+} document.addEventListener("DOMContentLoaded", function () 
 {
     const token = localStorage.getItem("authToken");
     if (!token)
@@ -30,7 +33,7 @@ function fetchUserDetails(token)
     fetch('http://localhost:8080/users/userDetails', {
         method: "GET",
         headers: {
-            "Authorization": "Bearer " + token 
+            "Authorization": "Bearer " + token
         }
     })
         .then(response => response.json())
@@ -52,7 +55,8 @@ deleteButton = document.getElementById("eliminaAccount");
 
 deleteButton.addEventListener("click", deleteAccount);
 
-function deleteAccount() {
+function deleteAccount()
+{
     let token = localStorage.getItem("authToken");
     fetch('http://localhost:8080/users/deleteUser', {
         method: "DELETE",
@@ -73,5 +77,29 @@ function deleteAccount() {
                 console.error('Account deletion failed:', response.status);
             }
         })
-    .catch(error => console.error("Errore nel recupero dati:", error));
+        .catch(error => console.error("Errore nel recupero dati:", error));
 }
+
+document.addEventListener('DOMContentLoaded', function ()
+{
+    const avatars = document.querySelectorAll('#photoGalleryModal img');
+    const profileImg = document.querySelector('.img-thumbnail');
+
+    const storedAvatar = localStorage.getItem('selectedAvatar');
+    if (storedAvatar)
+    {
+        profileImg.src = storedAvatar;
+    }
+
+    avatars.forEach(avatar =>
+    {
+        avatar.addEventListener('click', function ()
+        {
+            profileImg.src = this.src;
+            localStorage.setItem('selectedAvatar', this.src);
+            const modalEl = document.getElementById('photoGalleryModal');
+            const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+            modal.hide();
+        });
+    });
+});

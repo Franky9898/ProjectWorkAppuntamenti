@@ -48,8 +48,10 @@
                             <img src="https://placehold.co/150x150" alt="profilo" class="rounded-circle img-thumbnail"
                                 width="150" height="150">
                             <div class="mt-2">
-                                <button class="btn btn-dark btn-sm" type="button" id="editPhoto" onclick="">Modifica
-                                    foto</button>
+                                <button class="btn btn-dark btn-sm" type="button" id="editPhoto" data-bs-toggle="modal"
+                                    data-bs-target="#photoGalleryModal">
+                                    Modifica foto
+                                </button>
                             </div>
                         </div>
 
@@ -122,8 +124,10 @@
                                                 <div class="mb-3">
                                                     <label for="newPassword" class="form-label">Nuova Password</label>
                                                     <div class="input-group">
-                                                        <input type="password" class="form-control" id="newPassword" placeholder="Nuova Password">
-                                                        <button class="btn btn btn-primary" type="button" id="savePassword">Salva</button>
+                                                        <input type="password" class="form-control" id="newPassword"
+                                                            placeholder="Nuova Password">
+                                                        <button class="btn btn btn-primary" type="button"
+                                                            id="savePassword">Salva</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -142,6 +146,33 @@
                 <div class="main-content">
                 </div>
                 <div class="footer-spacer"></div>
+            </div>
+
+            <div class="modal fade" id="photoGalleryModal" tabindex="-1" aria-labelledby="photoGalleryModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="photoGalleryModalLabel">Scegli un Avatar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Chiudi"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row g-3">
+                                    <div class="col-4 col-md-3">
+                                        <img src="../PaginaProfilo/avatar1.jpg" class="img-fluid rounded" alt="Avatar 1"
+                                            style="cursor: pointer;">
+                                    </div>
+                                    <div class="col-4 col-md-3">
+                                        <img src="../PaginaProfilo/avatar2.jpg" class="img-fluid rounded" alt="Avatar 2"
+                                            style="cursor: pointer;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <footer class="footer">
