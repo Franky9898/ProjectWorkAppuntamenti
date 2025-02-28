@@ -78,8 +78,8 @@ function displaySessions(session)
             <div class="card">
                 <h5 class="card-header card-header-style">${session.startingTime}</h5>
                 <div class="card-body card-body-style">
-                    <h5 class="card-title">Course: ${session.course.title}</h5>
-                    <p class="card-text">${session.course.description}</p>
+                    <h5 class="card-title">Course: ${session.title}</h5>
+                    <p class="card-text">${session.description}</p>
                     <div class="card-footer-style">
                         <a onclick="addSessionToUser(${session.id})" id="prenota-btn" class="btn btn-primary card-btn-style">Prenota</a>
                         
