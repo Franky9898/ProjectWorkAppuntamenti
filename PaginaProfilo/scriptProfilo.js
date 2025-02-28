@@ -92,8 +92,6 @@ function updatePassword(){
     let newPassword = document.getElementById("new-password");
     passwordValue = newPassword.value;
     let token = localStorage.getItem("authToken");
-    console.log(token);
-    console.log(newPassword);
     fetch('http://localhost:8080/users/editPassword', {
         method: "PUT",
         body: JSON.stringify({ "password": passwordValue }),
