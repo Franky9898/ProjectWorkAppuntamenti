@@ -110,7 +110,9 @@
   .profilo .card:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   }
-  
+  .form-label {
+    color: white !important;
+}
   .profilo .card-header {
     border-radius: 15px 15px 0 0;
     background-color: #007bff;
@@ -148,7 +150,7 @@
     border-radius: 8px;
     transition: transform 0.3s ease, background-color 0.3s;
     border-color: #000000 !important;
-    color: #010203;
+    color: #010302;
   }
   
   .profilo .btn-outline-secondary:hover {
@@ -213,7 +215,6 @@
   .social-icon:hover {
     color: #312a0b;
   }
-  
   .footer {
     background-color: #2c3e50;
     color: white;

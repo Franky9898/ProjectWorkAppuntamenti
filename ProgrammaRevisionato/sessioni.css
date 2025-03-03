@@ -3,7 +3,7 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('OIP.jpg');
+    background-image: url('killing-that-kettlebell-workout-royalty-free-image-637772778-1562688657.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -11,7 +11,7 @@ body {
     padding: 0;
 }
 
-/* Navbar Styling */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -67,7 +67,7 @@ body {
     background-color: #c0392b;
 }
 
-/* Glass Container for Main Content */
+/* Glass Container for Sessions Content */
 .container.my-5 {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -79,54 +79,78 @@ body {
     margin-bottom: 150px;
 }
 
-/* Card Styling */
+/* Heading */
+.container.my-5 h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Sessions Container (for dynamically added cards) */
+#sessions-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Card Styles */
 .card {
     border: none;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.1s;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
 }
 
-/* Card Header */
-.card-header {
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header-style {
+    user-select: none;
     background-color: #E5E1DA !important;
-    color: #333 !important;
-    padding: 15px;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
+    padding: 10px;
 }
 
-/* Card Body */
-.card-body {
+.card-body-style {
+    user-select: none;
     background-color: #F1F0E8 !important;
-    padding: 20px;
+    padding: 15px;
 }
 
-/* Button Styling (Overrides Bootstrap’s .btn-primary) */
-.btn-primary {
-    background-color: #B3C8CF;
-    border-color: #89A8B2;
+.card-btn-style {
+    background-color: #B3C8CF !important;
     color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border: 1px solid #89A8B2 !important;
     transition: transform 0.2s;
-    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
 }
 
-.btn-primary:hover {
-    background-color: #89A8B2;
-    border-color: #89A8B2;
+.card-btn-style:hover {
+    background-color: #89A8B2 !important;
+    border-color: #89A8B2 !important;
 }
 
-.btn-primary:active {
+.card-btn-style:active {
     transform: scale(0.95);
 }
 
-/* Footer Styling */
+.card-footer-style {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #F1F0E8;
+}
+
+/* Footer */
 .footer {
     background-color: #2c3e50;
     color: white;

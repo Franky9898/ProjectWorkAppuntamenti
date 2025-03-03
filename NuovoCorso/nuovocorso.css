@@ -169,7 +169,7 @@ body {
     color: white;
     text-align: center;
     padding: 5px 0 !important;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     z-index: 100;
