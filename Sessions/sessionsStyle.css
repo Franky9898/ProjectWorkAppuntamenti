@@ -112,9 +112,9 @@ body {
 .card-title {
     background: transparent !important;
     border-bottom: none;
-    color: white;
+    color: black;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     font-size: 1.4rem;
     font-weight: bold;
     border-radius: 8px;
@@ -212,6 +212,7 @@ body {
 }
 
 .card{
+    min-height: 300px;
     transition: transform 0.1s;
 }
 

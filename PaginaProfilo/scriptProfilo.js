@@ -80,6 +80,33 @@ function deleteAccount()
         .catch(error => console.error("Errore nel recupero dati:", error));
 }
 
+let savePswBtn;
+let editBtn = document.getElementById("editPassword");
+
+editBtn.addEventListener("click", function(){
+    savePswBtn = document.getElementById("savePassword");
+    savePswBtn.addEventListener("click", updatePassword);
+});
+
+function updatePassword(){
+    let newPassword = document.getElementById("new-password");
+    passwordValue = newPassword.value;
+    let token = localStorage.getItem("authToken");
+    fetch('http://localhost:8080/users/editPassword', {
+        method: "PUT",
+        body: JSON.stringify({ "password": passwordValue }),
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+.catch(error => console.error("Errore nel recupero dati:", error));
+}
+
 document.addEventListener('DOMContentLoaded', function ()
 {
     const avatars = document.querySelectorAll('#photoGalleryModal img');
