@@ -24,7 +24,7 @@
 }
 
 .navbar-menu li {
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 .navbar-menu a {
@@ -47,6 +47,7 @@
     border-radius: 20px;
     padding: 8px 15px;
     transition: background 0.3s ease;
+    margin-left: 40px;
 }
 
 .btn-login:hover {
