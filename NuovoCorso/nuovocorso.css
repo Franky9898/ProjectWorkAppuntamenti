@@ -4,7 +4,6 @@
     align-items: center;
     background-color: #36495c;
     padding: 10px 20px;
-    z-index: 2;
 }
 
 .navbar-brand img {
@@ -25,7 +24,7 @@
 }
 
 .navbar-menu li {
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 .navbar-menu a {
@@ -48,6 +47,7 @@
     border-radius: 20px;
     padding: 8px 15px;
     transition: background 0.3s ease;
+    margin-left: 40px;
 }
 
 .btn-login:hover {
@@ -169,7 +169,7 @@ body {
     color: white;
     text-align: center;
     padding: 5px 0 !important;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     z-index: 100;

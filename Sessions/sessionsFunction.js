@@ -1,41 +1,49 @@
 Container = document.getElementById("sessions-container");
 
-function getQueryParam(id) {
+function getQueryParam(id)
+{
     const params = new URLSearchParams(window.location.search);
     console.log(params);
     return params.get(id);
 }
 
-function loadSessionsOnload(e) {
+function loadSessionsOnload(e)
+{
     let id = getQueryParam("id");
-    e.preventDefault();   
+    e.preventDefault();
     fetch('http://localhost:8080/sessions/showSessionsByCourseId/' + id)
         .then(response => response.json())
-        .then(data => {
+        .then(data =>
+        {
             console.log(data);
             displaySessions(data);
         })
-    .catch(error => console.error("Errore nel recupero dati:", error));
+        .catch(error => console.error("Errore nel recupero dati:", error));
 }
 
 document.addEventListener("DOMContentLoaded", loadSessionsOnload);
 
-function loadSessions() {
+function loadSessions()
+{
     const filters = getFilters();
 
     fetch('http://localhost:8080/sessions/showSessions')
         .then(response => response.json())
-        .then(data => {
+        .then(data =>
+        {
             console.log(data);
-            
-            const filteredSessions = data.filter(session => {
+
+            const filteredSessions = data.filter(session =>
+            {
                 const coaches = session.course.users.filter(user => user.role === 'COACH');
 
-                if (filters.selectedCoach && !coaches.some(coach => coach.lastName === filters.selectedCoach)) {
+                if (filters.selectedCoach && !coaches.some(coach => coach.lastName === filters.selectedCoach))
+                {
                     return false;
                 }
 
-                if (filters.selectedHour && session.startingTime !== filters.selectedHour) {
+                if (filters.selectedHour && session.startingTime !== filters.selectedHour)
+                {
                     return false;
                 }
 
@@ -48,26 +56,30 @@ function loadSessions() {
         .catch(error => console.error("Errore nel recupero dati:", error));
 }
 
-function loadAllSessions(e) {
+function loadAllSessions(e)
+{
     e.preventDefault();
     fetch('http://localhost:8080/sessions/showSessions')
         .then(response => response.json())
-        .then(data => {
+        .then(data =>
+        {
             console.log(data);
             displaySessions(data);
         })
-    .catch(error => console.error("Errore nel recupero dati:", error));
+        .catch(error => console.error("Errore nel recupero dati:", error));
 }
 
-function displaySessions(session){
-    const sessionCard = session.map(session => {
-    return `
+function displaySessions(session)
+{
+    const sessionCard = session.map(session =>
+    {
+        return `
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
                 <h5 class="card-header card-header-style">${session.startingTime}</h5>
                 <div class="card-body card-body-style">
-                    <h5 class="card-title">Course: ${session.course.title}</h5>
-                    <p class="card-text">${session.course.description}</p>
+                    <h5 class="card-title">Course: ${session.title}</h5>
+                    <p class="card-text">${session.description}</p>
                     <div class="card-footer-style">
                         <a onclick="addSessionToUser(${session.id})" id="prenota-btn" class="btn btn-primary card-btn-style">Prenota</a>
                         
@@ -83,15 +95,17 @@ function displaySessions(session){
 /* <p class="card-text">Coach ~${coach.firstName} ${coach.lastName}</p> */
 
 let allButton = document.getElementById("all-btn");
-allButton.addEventListener("click", function(e){
+allButton.addEventListener("click", function (e)
+{
     loadAllSessions(e);
 });
 
-function getFilters() {
+function getFilters()
+{
     const selectedCoach = document.getElementById("coachSelect").value;
     const selectedHour = document.getElementById("timeSlot").value;
-    
-    return {selectedCoach, selectedHour};
+
+    return { selectedCoach, selectedHour };
 }
 
 
@@ -103,7 +117,8 @@ document.getElementById("coachSelect").addEventListener("change", loadSessions);
 
 let prenotaButton = document.getElementById("prenota-btn");
 
-function addSessionToUser(sessionId){
+function addSessionToUser(sessionId)
+{
     let token = localStorage.getItem("authToken");
     fetch('http://localhost:8080/users/addUserSession/' + sessionId, {
         method: "POST",
@@ -113,24 +128,28 @@ function addSessionToUser(sessionId){
         },
     })
         .then(response => response.json())
-        .then(data => {
+        .then(data =>
+        {
             console.log(data);
         })
-    .catch(error => console.error("Errore nel recupero dati:", error));
+        .catch(error => console.error("Errore nel recupero dati:", error));
 }
 
 
-function toggleMenu() {
+function toggleMenu()
+{
     const menu = document.getElementById('navbarMenu');
     menu.classList.toggle('show');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function ()
+{
     const loginButton = document.getElementById('loginButton');
     const token = localStorage.getItem('authToken');
 
-    if(token != null) {
+    if (token != null)
+    {
         loginButton.textContent = 'Profilo';
         loginButton.href = '/profile.html';
-    }    
+    }
 });
