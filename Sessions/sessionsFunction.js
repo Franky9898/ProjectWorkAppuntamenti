@@ -35,7 +35,7 @@ function loadSessions()
 
             const filteredSessions = data.filter(session =>
             {
-                const coaches = session.course.users.filter(user => user.role === 'COACH');
+                const coaches = session.users.filter(user => user.role === 'COACH');
 
                 if (filters.selectedCoach && !coaches.some(coach => coach.lastName === filters.selectedCoach))
                 {
@@ -131,6 +131,7 @@ function addSessionToUser(sessionId)
         .then(data =>
         {
             console.log(data);
+            window.alert("Sessione aggiunta con successo");
         })
         .catch(error => console.error("Errore nel recupero dati:", error));
 }
